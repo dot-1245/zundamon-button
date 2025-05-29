@@ -105,10 +105,13 @@
   </footer>
 
   <script>
-    function playSound(src) {
-      const audio = new Audio(src);
-      audio.play();
-    }
+  let currentAudio;
+function playSound(src) {
+  if (currentAudio) currentAudio.pause();
+  currentAudio = new Audio(src);
+  currentAudio.play();
+}
+
 
     document.querySelectorAll(".tab-btn").forEach(button => {
       button.addEventListener("click", () => {
