@@ -23,6 +23,6 @@ const buttons = document.getElementsByClassName("sound-button");
 for (let button of buttons) {
   button.addEventListener("click", () => {
     const audioValue = button.getAttribute("audio");
-    playSound(`/sounds/${audioValue}.wav`);
+    playSound(`./sounds/${audioValue}.wav`);
   });
 }
