@@ -4,80 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ずんだもんVCボタン</title>
-  <style>
-    body {
-      font-family: "Arial", sans-serif;
-      background-color: #f0fff4;
-      margin: 0;
-      padding: 1rem;
-      color: #333;
-    }
-
-    h1 {
-      text-align: center;
-      color: #388e3c;
-    }
-
-    .tab-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-
-    .tab-buttons button {
-      background-color: #c8e6c9;
-      color: #2e7d32;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .tab-buttons button.active {
-      background-color: #66bb6a;
-      color: white;
-    }
-
-    .category {
-      display: none;
-    }
-
-    .category.active {
-      display: block;
-    }
-
-    .sound-button {
-      display: block;
-      width: 100%;
-      max-width: 300px;
-      margin: 0.5rem auto;
-      padding: 1rem;
-      border: none;
-      border-radius: 1rem;
-      background-color: #a5d6a7;
-      color: #1b5e20;
-      font-size: 1.2rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #666;
-      margin-top: 2rem;
-    }
-
-    footer a {
-      color: #4caf50;
-      text-decoration: none;
-    }
-  </style>
+  
+  <!-- style.css読み込み -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bulma読み込み -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
 </head>
-<body>
+<body class="has-text-centered">
   <h1>ずんだもん VCボタン</h1>
 
   <div class="tab-buttons">
@@ -87,38 +20,24 @@
   </div>
 
   <div class="category active" id="greetings">
-    <button class="sound-button" onclick="playSound('hello.wav')">こんにちは</button>
-    <button class="sound-button" onclick="playSound('hello1.wav')">こ↓ん↑にちは</button>
+    <button class="sound-button button" audio="hello">こんにちは</button>
+    <button class="sound-button button" audio="hello1">こ↓ん↑にちは</button>
   </div>
 
 
   <div class="category" id="thanks">
-    <button class="sound-button" onclick="playSound('tthanks.wav')">ありがとう！</button>
+    <button class="sound-button button" audio="thanks">ありがとう！</button>
   </div>
 
   <div class="category" id="love">
-    <button class="sound-button" onclick="playSound('I really love you.wav')">ほんと愛してる</button>
+    <button class="sound-button button" audio="I really love you">ほんと愛してる</button>
   </div>
 
   <footer>
     音声：<a href="https://voicevox.hiroshiba.jp/" target="_blank">VOICEVOX:ずんだもん</a>
   </footer>
 
-  <script>
-    function playSound(src) {
-      const audio = new Audio(src);
-      audio.play();
-    }
-
-    document.querySelectorAll(".tab-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
-        document.querySelectorAll(".category").forEach(cat => cat.classList.remove("active"));
-
-        button.classList.add("active");
-        document.getElementById(button.dataset.tab).classList.add("active");
-      });
-    });
-  </script>
+  <!-- script.js読み込み -->
+  <script src="script.js"></script>
 </body>
 </html>
