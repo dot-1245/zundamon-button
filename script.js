@@ -19,7 +19,7 @@ document.querySelectorAll(".tab-btn").forEach((button) => {
 
 const buttons = document.getElementsByClassName("sound-button");
 
-for (let button of buttons) {
+for (const button of buttons) {
   button.addEventListener("click", () => {
     const audioValue = button.getAttribute("audio");
     playSound(`./sounds/${audioValue}.wav`);
