@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ずんだもんVCボタン</title>
-  
-  <!-- style.css読み込み -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- Bulma読み込み -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
-</head>
-<body class="has-text-centered">
-  <h1>ずんだもん VCボタン</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ずんだもんVCボタン</title>
 
-  <div class="tab-buttons">
-    <button class="tab-btn active" data-tab="greetings">あいさつ</button>
-    <button class="tab-btn" data-tab="thanks">ありがとう</button>
-    <button class="tab-btn" data-tab="love">愛</button>
-  </div>
+    <!-- style.css読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bulma読み込み -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body class="has-text-centered p-6">
+    <h1 class="is-size-3 has-text-weight-semibold">ずんだもん VCボタン</h1>
 
-  <div class="category active" id="greetings">
-    <button class="sound-button button" audio="hello">こんにちは</button>
-    <button class="sound-button button" audio="hello1">こ↓ん↑にちは</button>
-  </div>
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="greetings">あいさつ</button>
+      <button class="tab-btn" data-tab="thanks">ありがとう</button>
+      <button class="tab-btn" data-tab="love">愛</button>
+    </div>
 
+    <div class="category active" id="greetings">
+      <button class="sound-button button" audio="good morning">おはよう</button>
+      <button class="sound-button button" audio="hello">こんにちは</button>
+      <button class="sound-button button" audio="hello1">こ↓ん↑にちは</button>
+      <button class="sound-button button" audio="good evening">
+        こんばんは
+      </button>
+    </div>
 
-  <div class="category" id="thanks">
-    <button class="sound-button button" audio="thanks">ありがとう！</button>
-  </div>
+    <div class="category" id="thanks">
+      <button class="sound-button button" audio="thanks">ありがとう！</button>
+    </div>
 
-  <div class="category" id="love">
-    <button class="sound-button button" audio="I really love you">ほんと愛してる</button>
-  </div>
+    <div class="category" id="love">
+      <button class="sound-button button" audio="I love you">愛してる</button>
+      <button class="sound-button button" audio="I really love you">
+        ほんと愛してる
+      </button>
+    </div>
 
-  <footer>
-    音声：<a href="https://voicevox.hiroshiba.jp/" target="_blank">VOICEVOX:ずんだもん</a>
-  </footer>
+    <footer>
+      音声：<a href="https://voicevox.hiroshiba.jp/" target="_blank"
+        >VOICEVOX:ずんだもん</a
+      >
+    </footer>
 
-  <!-- script.js読み込み -->
-  <script src="script.js"></script>
-</body>
+    <!-- script.js読み込み -->
+    <script src="script.js"></script>
+  </body>
 </html>
