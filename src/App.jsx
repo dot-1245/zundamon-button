@@ -81,6 +81,7 @@ export default function App() {
         <button className="is-info sound-button button" audio="good_morning">おはよう</button>
         <button className="is-info sound-button button" audio="hello">こんにちは</button>
         <button className="is-info sound-button button" audio="hello1">こ↓ん↑にちは</button>
+        <button className="is-info sound-button button" audio="tya">ちゃ</button>
         <button className="is-info sound-button button" audio="good_evening">こんばんは</button>
       </div>
 
