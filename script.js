@@ -1,6 +1,11 @@
-async function playSound(src) {
-  const audio = new Audio(src);
-  audio.play();
+function playSound(src) {
+	const audio = new Audio(src);
+	audio.play()
+		.catch((err) => {
+			alert("an error occured:", err);
+			return;
+		});
+	return;
 }
 
 document.querySelectorAll(".tab-btn").forEach((button) => {
